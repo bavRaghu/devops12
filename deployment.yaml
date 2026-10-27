@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: seleniumdemo
-          image: bavya-raghu/simple-demo:seleniumimage
+          image: bavyaraghu/simple-demo:seleniumimage
           ports:
             - containerPort: 5000

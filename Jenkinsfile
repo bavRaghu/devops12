@@ -30,12 +30,14 @@ pipeline {
             }
         }
 
+
         stage('Push Image') {
             steps {
-                bat 'docker tag simple-demo:seleniumimage bavya-raghu/simple-demo:seleniumimage'
-                bat 'docker push bavya-raghu/simple-demo:seleniumimage'
+                bat 'docker tag simple-demo:seleniumimage bavyaraghu/simple-demo:seleniumimage'
+                bat 'docker push bavyaraghu/simple-demo:seleniumimage'
             }
         }
+
 
         stage('Deploy') {
             steps {
