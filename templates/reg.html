@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script>
+        function valForm() {
+            const name = document.getElementById("n").value;
+            const password = document.getElementById("pw").value;
+
+            if (name.trim() === "") {
+                alert("Username cannot be empty");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password cannot be empty");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 chars");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <form action="/register" method="post" onsubmit="return valForm()">
+        <label for="n">Name:</label>
+        <input type="text" id="n" name="n"><br>
+
+        <label for="pw">Password:</label>
+        <input type="password" id="pw" name="pw"><br>
+
+        <input type="submit" id="submit" value="Register">
+    </form>
+</body>
+</html>
